@@ -84,7 +84,7 @@ app.post("/forgot-password", async (req, res) => {
         SECRET,
         { expiresIn: "5m" }
       );
-      const link = `http://localhost:8000/reset-password/${userExist.id}/${token}`;
+      const link = `https://urlshortner-bqh3.onrender.com/reset-password/${userExist.id}/${token}`;
       var transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
